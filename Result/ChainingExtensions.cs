@@ -22,7 +22,7 @@ public static class ChainingExtensions
         return func.Invoke();
     }
     
-    public static Result Chain<TResult>(this Result result, Action action)
+    public static Result Chain(this Result result, Action action)
     {
         if (!result.IsSuccess)
         {
