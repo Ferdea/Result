@@ -11,6 +11,8 @@
         <RepositoryUrl>https://github.com/Ferdea/Result</RepositoryUrl>
         <RepositoryType>Github</RepositoryType>
         <Version>1.0.1</Version>
+        <Configurations>Debug;Release;Nuget</Configurations>
+        <Platforms>AnyCPU</Platforms>
     </PropertyGroup>
 
 </Project>
