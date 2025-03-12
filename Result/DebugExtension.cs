@@ -2,34 +2,6 @@ namespace Result;
 
 public static class DebugExtension
 {
-    public static Result DebugWrite(this Result result, TextWriter? writer = null)
-    {
-        writer ??= Console.Out;
-        
-        if (!result.IsSuccess)
-        {
-            writer.WriteLine($"Error: {result.Error.Message}");
-            return result;
-        }
-        
-        writer.WriteLine("Ok");
-        return result;
-    }
-    
-    public static Result<TValue> DebugWrite<TValue>(this Result<TValue> result, TextWriter? writer = null)
-    {
-        writer ??= Console.Out;
-        
-        if (!result.IsSuccess)
-        {
-            writer.WriteLine($"Error: {result.Error.Message}");
-            return result;
-        }
-        
-        writer.WriteLine($"Ok: \"{result.Value}\"");
-        return result;
-    }
-    
     public static Result DebugIfOk(this Result result, Action action)
     {
         if (!result.IsSuccess)
